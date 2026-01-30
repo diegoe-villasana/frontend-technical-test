@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { ArrowRight, ArrowLeft, Instagram, Twitter, Youtube, ChevronDown, ChevronUp, Users} from 'lucide-react'
+import { ArrowRight, ArrowLeft, Instagram, ChevronDown, ChevronUp, Users} from 'lucide-react'
 import { Button, Card, Input } from '@/components/ui'
-import { ShieldCheck, BadgeCheck } from 'lucide-react'
+import { ShieldCheck } from 'lucide-react'
 
 export default function Step3Socials() {
   const [showManual, setShowManual] = useState(false)
