@@ -91,13 +91,16 @@ export default function Step2Niche() {
               type="button"
               variant="outline"
               onClick={() => navigate('/onboarding/bio')}
-              className="flex-1 bg-transparent border-white text-white hover:bg-slate-800 hover:text-white"
+              className="flex-1 bg-transparent border-white text-white hover:bg-slate-800 hover:text-white transition-colors"
             >
-              <ArrowLeft className=" mr-2 h-4 w-4" />
+              <ArrowLeft className="mr-2 h-4 w-4" />
               Back
             </Button>
-            
-            <Button type="submit" className="flex-1">
+        
+            <Button 
+              type="submit" 
+              className="flex-1 bg-[#FF2E63] hover:bg-[#d41b4a] text-white border-none shadow-[0_0_15px_rgba(255,46,99,0.4)] transition-all hover:scale-[1.02]"
+            >
               Next
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>

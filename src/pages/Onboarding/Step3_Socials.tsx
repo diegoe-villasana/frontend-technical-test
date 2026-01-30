@@ -2,9 +2,10 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { ArrowRight, ArrowLeft, Instagram, Twitter, Youtube, ChevronDown, ChevronUp, Users} from 'lucide-react'
 import { Button, Card, Input } from '@/components/ui'
+import { ShieldCheck, BadgeCheck } from 'lucide-react'
 
 export default function Step3Socials() {
-  const [showManual, setShowManual] = useState(false)// Estado para mostrar/ocultar la sección de verificación manual
+  const [showManual, setShowManual] = useState(false)
   const navigate = useNavigate()
   const [formData, setFormData] = useState({
     instagram: '',
@@ -60,14 +61,25 @@ export default function Step3Socials() {
               Connect Instagram Automatically
             </Button>
           </div>
+          <div className="flex items-center gap-4 p-4 rounded-xl bg-[#1e293b]/50 border border-slate-700/50 mt-4">
+            <div className="p-2.5 bg-emerald-500/10 rounded-full shrink-0">
+              <ShieldCheck className="w-6 h-6 text-emerald-500" />
+            </div>
+            <div>
+              <h3 className="text-sm font-medium text-white">Identity Secured</h3>
+              <p className="text-xs text-slate-400 mt-0.5">
+                Your information is encrypted and safe.
+              </p>
+            </div>
+          </div>
           
           <div className="relative py-4"> 
             <div className="absolute inset-0 flex items-center">
-              {/* Línea divisoria oscura */}
+
               <span className="w-full border-t border-slate-700" />
             </div>
             <div className="relative flex justify-center text-xs uppercase">
-              {/* Fondo del texto igual al de la tarjeta */}
+
               <span className="bg-[#0f172a] px-3 text-slate-500 font-medium">Or verify manually</span>
             </div>
           </div>
@@ -126,16 +138,22 @@ export default function Step3Socials() {
           </div>
 
           <div className="flex gap-3 pt-4">
+
             <Button
               type="button"
               variant="outline"
               onClick={() => navigate('/onboarding/niche')}
-              className="flex-1 bg-transparent border-white text-white hover:bg-slate-800 hover:text-white"
+              className="flex-1 bg-transparent border-white text-white hover:bg-slate-800 hover:text-white transition-colors"
             >
               <ArrowLeft className="mr-2 h-4 w-4" />
               Back
             </Button>
-            <Button type="submit" className="flex-1">
+            
+
+            <Button 
+              type="submit" 
+              className="flex-1 bg-[#FF2E63] hover:bg-[#d41b4a] text-white border-none shadow-[0_0_15px_rgba(255,46,99,0.4)] transition-all hover:scale-[1.02]"
+            >
               Finish
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
