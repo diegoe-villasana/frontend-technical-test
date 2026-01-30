@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { ArrowRight, ArrowLeft, Check } from 'lucide-react'
+import { ArrowRight, ArrowLeft} from 'lucide-react'
 import { Button, Card } from '@/components/ui'
 import { cn } from '@/lib/utils'
 
